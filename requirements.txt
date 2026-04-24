@@ -8,4 +8,3 @@ textblob
 vaderSentiment
 scikit-learn
 xgboost
-tensorflow
