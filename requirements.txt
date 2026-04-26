@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ============================================================
 #  Stock ML Analyzer Pro — Requirements
 #  Install command:
@@ -29,3 +30,15 @@ matplotlib>=3.7.0         # Static charts (backup)
 
 # ── Web App ───────────────────────────────────
 streamlit>=1.30.0         # Web UI framework
+=======
+streamlit
+numpy
+pandas
+matplotlib
+yfinance
+ta
+textblob
+vaderSentiment
+scikit-learn
+xgboost
+>>>>>>> b724216497a2f523d135056045f62fad719b2f78
