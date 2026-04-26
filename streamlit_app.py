@@ -18,7 +18,7 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import streamlit as st
 
-# આ project ની બીજી files import
+
 from analysis import (
     fetch_stock_data,
     add_features,
@@ -82,7 +82,7 @@ def render_sidebar() -> tuple[str, bool]:
         ticker = st.text_input(
             "Enter Stock Ticker",
             value="RELIANCE.NS",
-            placeholder="e.g. TSLA, AAPL, RELIANCE.NS"
+            # placeholder="e.g. TSLA, AAPL, RELIANCE.NS"
         ).strip().upper()
 
         # Quick select buttons
