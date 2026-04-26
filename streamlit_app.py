@@ -117,7 +117,7 @@ def render_welcome():
         <h1>📈 Stock ML Analyzer Pro</h1>
         <h3 style='color:#6a90b0;'>8-Factor 10-Day Prediction Engine</h3>
         <br>
-        # <p>Sidebar માં ticker enter કરો અને <b>Analyze Now</b> click કરો</p>
+        
         <br>
         <table style='margin:auto; border-collapse:collapse; color:#c8d8e8;'>
             <tr><td style='padding:8px;'>✅ Technical Indicators (20/50/200 DMA, RSI, MACD, BB)</td></tr>
