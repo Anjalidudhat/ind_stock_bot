@@ -613,14 +613,14 @@ def main():
         return
 
     # 4. Fetch & process data
-    with st.spinner(f"📥 {ticker} નો data fetch કરીએ છીએ..."):
+    with st.spinner(f"📥 Fetching data for {ticker}..."):
         df_raw = fetch_stock_data(ticker)
 
     if df_raw is None or df_raw.empty:
         st.error(f"❌ **{ticker}** નો data મળ્યો નહીં. finance.yahoo.com પર ticker check કરો.")
         return
 
-    with st.spinner("⚙️ Indicators compute + Models train કરીએ છીએ..."):
+    with st.spinner("⚙️ Computing indicators & training models..."):
         df           = add_features(df_raw.copy())
         sentiment    = analyze_sentiment(ticker)
         fundamentals = get_fundamentals(ticker)
