@@ -617,7 +617,7 @@ def main():
         df_raw = fetch_stock_data(ticker)
 
     if df_raw is None or df_raw.empty:
-        st.error(f"❌ **{ticker}** નો data મળ્યો નહીં. finance.yahoo.com પર ticker check કરો.")
+        st.error(f"Could not fetch data for {ticker}. Please check the ticker at finance.yahoo.com.")
         return
 
     with st.spinner("⚙️ Computing indicators & training models..."):
