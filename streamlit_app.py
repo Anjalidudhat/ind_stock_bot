@@ -37,7 +37,7 @@ from analysis import (
 #  PAGE SETUP
 # ─────────────────────────────────────────────
 def setup_page():
-    """Streamlit page configuration અને custom CSS"""
+    """Streamlit page configuration and custom CSS"""
     st.set_page_config(
         page_title="Stock ML Analyzer Pro",
         page_icon="📈",
@@ -70,7 +70,7 @@ def setup_page():
 # ─────────────────────────────────────────────
 def render_sidebar() -> tuple[str, bool]:
     """
-    Sidebar render કરો
+    Sidebar render 
     Returns: (ticker, analyze_button_clicked)
     """
     with st.sidebar:
@@ -86,23 +86,23 @@ def render_sidebar() -> tuple[str, bool]:
         ).strip().upper()
 
         # Quick select buttons
-        st.markdown("**Quick Select:**")
-        c1, c2 = st.columns(2)
-        with c1:
-            if st.button("RELIANCE.NS", use_container_width=True): ticker = "RELIANCE.NS"
-            if st.button("INFY.NS",     use_container_width=True): ticker = "INFY.NS"
-            if st.button("HDFCBANK.NS", use_container_width=True): ticker = "HDFCBANK.NS"
-        with c2:
-            if st.button("TSLA", use_container_width=True): ticker = "TSLA"
-            if st.button("AAPL", use_container_width=True): ticker = "AAPL"
-            if st.button("NVDA", use_container_width=True): ticker = "NVDA"
+        # st.markdown("**Quick Select:**")
+        # c1, c2 = st.columns(2)
+        # with c1:
+        #     if st.button("RELIANCE.NS", use_container_width=True): ticker = "RELIANCE.NS"
+        #     if st.button("INFY.NS",     use_container_width=True): ticker = "INFY.NS"
+        #     if st.button("HDFCBANK.NS", use_container_width=True): ticker = "HDFCBANK.NS"
+        # with c2:
+        #     if st.button("TSLA", use_container_width=True): ticker = "TSLA"
+        #     if st.button("AAPL", use_container_width=True): ticker = "AAPL"
+        #     if st.button("NVDA", use_container_width=True): ticker = "NVDA"
 
         st.divider()
         analyze_btn = st.button("🚀 Analyze Now", type="primary", use_container_width=True)
 
-        st.divider()
-        st.caption("⚠️ Educational purposes only.")
-        st.caption("Not financial advice.")
+        # st.divider()
+        # st.caption("⚠️ Educational purposes only.")
+        # st.caption("Not financial advice.")
 
     return ticker, analyze_btn
 
@@ -111,13 +111,13 @@ def render_sidebar() -> tuple[str, bool]:
 #  WELCOME SCREEN (before analysis)
 # ─────────────────────────────────────────────
 def render_welcome():
-    """Analyze button press ના પહેલા welcome screen"""
+    """Analyze button press before welcome screen"""
     st.markdown("""
     <div style='text-align:center; padding: 60px 0; color: #e0f0ff;'>
         <h1>📈 Stock ML Analyzer Pro</h1>
         <h3 style='color:#6a90b0;'>8-Factor 10-Day Prediction Engine</h3>
         <br>
-        <p>Sidebar માં ticker enter કરો અને <b>Analyze Now</b> click કરો</p>
+        # <p>Sidebar માં ticker enter કરો અને <b>Analyze Now</b> click કરો</p>
         <br>
         <table style='margin:auto; border-collapse:collapse; color:#c8d8e8;'>
             <tr><td style='padding:8px;'>✅ Technical Indicators (20/50/200 DMA, RSI, MACD, BB)</td></tr>
@@ -660,8 +660,8 @@ def main():
     st.divider()
     render_ml_details(ml)
 
-    # 9. Footer
-    st.caption("⚠️ Educational purposes only. Not financial advice. Past performance ≠ future results.")
+    # # 9. Footer
+    # st.caption("⚠️ Educational purposes only. Not financial advice. Past performance ≠ future results.")
 
 
 # Entry point
